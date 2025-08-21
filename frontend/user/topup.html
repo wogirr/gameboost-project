@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up - GAMPANGTOPUP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style_topup.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">GAMPANGTOPUP</a>
+            <nav class="main-nav">
+                <a href="index.html">Beranda</a>
+                <a href="riwayat.html">Riwayat</a>
+                <a href="faq.html">Bantuan</a>
+            </nav>
+            <div id="user-auth-section" class="user-section">
+            </div>
+            <div class="hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="container topup-page-container">
+        <!-- Kontainer utama untuk semua detail produk -->
+        <div id="product-details-container">
+    
+            <!-- 1. Header Produk (Banner, Logo, Judul) -->
+            <div id="product-header" class="game-banner">
+                <img src="https://placehold.co/800x200/1a1a1a/fbc02d?text=Banner" alt="Game Banner" class="game-banner-img">
+                <img src="https://placehold.co/100x100/2c2c2c/ffffff?text=Logo" alt="Game Logo" class="game-logo-img">
+            </div>
+    
+            <h1 id="product-title" class="product-title">Memuat Nama Game...</h1>
+            <p id="product-description" class="product-description"></p>
+    
+            <!-- 2. Body Utama (Layout 2 Kolom) -->
+            <div class="topup-body-layout">
+    
+                <!-- KOLOM KIRI: Cara Top Up -->
+                <div class="topup-sidebar">
+                    <div class="card" id="how-to-card">
+                         <h3 class="card-step-title"><i class="fas fa-question-circle"></i> Cara Top Up</h3>
+                         <ol class="how-to-list">
+                            <li>Masukkan data akun Anda pada kolom yang tersedia di sebelah kanan.</li>
+                            <li>Pilih nominal top-up yang Anda inginkan.</li>
+                            <li>Masukkan email/WhatsApp (opsional) untuk menerima bukti pembayaran.</li>
+                            <li>Klik "Top Up Sekarang", lalu konfirmasi pesanan Anda.</li>
+                            <li>Selesaikan pembayaran melalui metode yang Anda pilih.</li>
+                            <li>Item akan segera masuk ke akun Anda setelah pembayaran berhasil.</li>
+                         </ol>
+                    </div>
+                </div>
+    
+                <!-- KOLOM KANAN: Konten Utama (Input, Item, Kontak) -->
+                <div class="topup-main-content">
+                    <!-- Bagian 1: Input Data Akun -->
+                    <div class="card" id="player-input-card">
+                        <h3 class="card-step-title"><span>1</span> Masukkan Data Akun</h3>
+                        <div id="player-input-section">
+                            <p>Memuat form...</p>
+                        </div>
+                    </div>
+    
+                    <!-- Bagian 2: Pilihan Nominal -->
+                    <div class="card" id="nominal-card">
+                        <h3 class="card-step-title"><span>2</span> Pilih Nominal Top Up</h3>
+                        <div id="nominal-items-container">
+                            <p>Memuat item...</p>
+                        </div>
+                    </div>
+    
+                    <!-- Bagian 3: Kontak & Tombol Checkout -->
+                    <div class="card" id="contact-card">
+                        <h3 class="card-step-title"><span>3</span> Detail Kontak (Opsional)</h3>
+                        <p class="card-subtitle">Kami akan mengirimkan bukti pembayaran ke email Anda.</p>
+                        <div class="form-group">
+                            <input type="email" id="contact-email" class="form-control" placeholder="Alamat Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="contact-whatsapp" class="form-control" placeholder="Nomor WhatsApp (cth: 0812xxxx)">
+                        </div>
+                    </div>
+    
+                    <button id="checkout-button" class="btn btn-primary btn-block" disabled>Top Up Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Konfirmasi Pesanan (Tidak Berubah) -->
+    <div id="confirmation-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3 class="modal-title">Konfirmasi Pesanan</h3>
+            <div class="order-summary" id="modal-order-summary"></div>
+            <button id="pay-now-btn" class="btn btn-primary btn-block">Bayar Sekarang</button>
+            <button id="close-modal-btn" class="btn-text">Batalkan</button>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/artikel-detail.js"></script>
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="Mid-client-8YYJY60BXuKUwAa7"></script>
+    <script src="assets/js/auth-ui.js" defer></script>
+    <script src="assets/js/topup.js"></script>
+</body>
+</html>

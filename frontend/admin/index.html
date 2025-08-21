@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - GampangTopup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <script src="https://cdn.tiny.cloud/1/v26deg743lsvei2on3liiluveks85593pexy8y3m0vlbt7a3/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">GAMPANGTOPUP</div>
+    <ul class="nav-links">
+      <li><a href="#dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+      <li><a href="#categories"><i class="fas fa-layer-group"></i> Categories</a></li>
+      <li><a href="#products"><i class="fas fa-gamepad"></i> Products</a></li>
+      <li><a href="#group"><i class="fa-solid fa-object-group"></i> Group Items</a></li>
+      <li><a href="#items"><i class="fas fa-cube"></i> Product Items</a></li>
+      <li><a href="#payments"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
+      <li><a href="#transactions"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+      <li><a href="#users"><i class="fa-solid fa-circle-user"></i> Management Users</a></li>
+      <li><a href="#articles"><i class="fas fa-newspaper"></i> Articles</a></li>
+    </ul>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <header>
+      <div class="header-left">
+        <h1 id="pageTitle">Dashboard</h1>
+      </div>
+      <div class="header-right">
+        <div class="user-info">
+          <img src="https://ui-avatars.com/api/?name=Admin&background=fbc02d&color=121212" alt="Admin">
+          <span>Admin</span>
+        </div>
+        <button class="logout-btn" id="logoutBtn"><i class="fas fa-sign-out-alt"></i></button>
+      </div>
+    </header>
+    <!-- Dynamic Content Area -->
+    <div id="contentArea" class="content-area">
+      <!-- Konten akan diisi oleh JavaScript berdasarkan halaman yang aktif -->
+    </div>
+  
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

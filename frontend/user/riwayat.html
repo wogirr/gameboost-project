@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Transaksi - GAMPANGTOPUP</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS Utama (untuk header, footer, dll) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- CSS KHUSUS untuk halaman ini -->
+    <link rel="stylesheet" href="assets/css/style_riwayat.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">GAMPANGTOPUP</a>
+            <nav class="main-nav">
+                <a href="index.html">Beranda</a>
+                <a href="riwayat.html" class="active">Riwayat</a>
+                <a href="#">Bantuan</a>
+            </nav>
+            <!-- Kontainer untuk UI Login/Profil -->
+            <div id="user-section"></div>
+        </div>
+    </header>
+
+    <main class="container history-page">
+        <h2 class="section-title">Riwayat Transaksi Saya</h2>
+        <div id="history-container">
+            <p class="loading-text">Memuat riwayat transaksi...</p>
+        </div>
+    </main>
+
+        <!-- Modal/Pop-up untuk Detail Transaksi (gantikan yang lama) -->
+        <div id="detail-modal" class="modal-overlay">
+            <div class="modal-content">
+                <button id="close-modal-btn" class="btn-text" aria-label="Tutup modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h3 class="modal-title">Detail Transaksi</h3>
+                <div id="modal-details-content" class="order-summary"></div>
+            </div>
+        </div>
+            <div class="modal-footer">
+                <p>Butuh Bantuan?</p>
+                <div class="cs-buttons">
+                    <a href="https://wa.me/6281234567890" target="_blank" class="btn-cs whatsapp">
+                        <i class="fab fa-whatsapp"></i> Hubungi via WhatsApp
+                    </a>
+                    <a href="https://t.me/your_cs_username" target="_blank" class="btn-cs telegram">
+                        <i class="fab fa-telegram-plane"></i> Hubungi via Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PENTING: Urutan script -->
+    <script src="assets/js/auth-ui.js"></script> <!-- Untuk menampilkan info login/profil -->
+    <script src="assets/js/riwayat.js"></script> <!-- Script khusus halaman ini -->
+</body>
+</html>

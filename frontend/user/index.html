@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMPANGTOPUP - Top Up Game Cepat & Terpercaya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <img src="http://localhost:5000/images/logo.png" class="icon_logo" alt="logo1">
+            <a href="index.html" class="logo">GAMPANGTOPUP</a>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="global-search" placeholder="Cari game...">
+                <button type="button" id="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="index.html">Top Up</a>
+                <a href="artikel.html">Artikel</a>
+                <a href="#">Support</a>
+            </nav>
+            <div id="user-auth-section" class="user-section">
+                </div>
+            <div class="hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner Slider -->
+        <section class="slider-container">
+            <div class="slider">
+                <div class="slide active"><img src="http://localhost:5000/images/banner1.JPG" alt="Banner 1"></div>
+                <div class="slide"><img src="http://localhost:5000/images/banner2.PNG" alt="Banner 2"></div>
+                <div class="slide"><img src="http://localhost:5000/images/banner3.PNG" alt="Banner 3"></div>
+            </div>
+            <button class="slider-btn prev"><i class="fa fa-chevron-left"></i></button>
+            <button class="slider-btn next"><i class="fa fa-chevron-right"></i></button>
+        </section>
+
+        <div class="container">
+            <!-- Flash Sale Section -->
+            <section class="flash-sale-section">
+                <div class="section-header">
+                    <h2 class="section-title">🔥 FLASH SALE</h2>
+                    <div class="sale-timer">
+                        <span id="flash-sale-timer">00:00:00</span>
+                    </div>
+                </div>
+                <div class="flash-sale-container">
+                    <div class="flash-sale-scroll">
+                        <!-- Flash sale items will be loaded by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category Tabs -->
+            <section id="category-tabs-container" class="category-tabs"></section>
+
+            <!-- Product Content -->
+            <div id="product-content-wrapper" class="category-content-wrapper">
+                <!-- Content will be loaded by JS -->
+            </div>
+        </div>
+        <section class="latest-articles-section container">
+            <div class="section-header">
+                <h2 class="section-title">ARTIKEL TERBARU & BERITA GAME</h2>
+                <a href="artikel.html" class="view-all-link">Lihat Semua Artikel</a>
+            </div>
+            <div class="article-grid" id="latest-articles-grid">
+                </div>
+        </section>
+    </main>
+
+<div id="footer-placeholder"></div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth-ui.js" defer></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

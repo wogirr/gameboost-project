@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel & Berita Game - GAMPANGTOPUP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <img src="http://localhost:5000/images/logo.png" class="icon_logo" alt="logo1">
+            <a href="index.html" class="logo">GAMPANGTOPUP</a>
+            <div class="search-container">
+                <input type="text" id="global-search" placeholder="Cari game...">
+                <button type="button" id="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Top Up</a>
+                <a href="#">Vouchers</a>
+                <a href="#">Support</a>
+            </nav>
+            <div id="user-auth-section" class="user-section"></div>
+            <div class="hamburger-menu"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="article-list-page">
+                <h1 class="page-main-title">Semua Artikel & Berita Game</h1>
+                <div class="article-grid" id="all-articles-grid">
+                    <p>Memuat artikel...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth-ui.js" defer></script>
+    <script src="assets/js/artikel.js"></script> 
+</body>
+</html>

@@ -1,0 +1,252 @@
+/* ================================================== */
+/* GAYA KHUSUS UNTUK HALAMAN RIWAYAT                  */
+/* ================================================== */
+
+body {
+    background-color: var(--bg-dark);
+}
+
+.history-page {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.history-page .section-title {
+    margin-bottom: 2rem;
+    color: var(--text-white);
+}
+
+/* Teks info atau error */
+.info-text, .error-text {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    color: var(--text-grey);
+}
+.error-text {
+    color: #F44336;
+}
+
+/* Item Riwayat */
+.history-item {
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #2a2a2a;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.history-item:hover {
+    background-color: #252525;
+    transform: translateY(-2px);
+}
+
+.history-item-details .item-title {
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+.history-item-details .item-invoice {
+    font-size: 0.85rem;
+    color: var(--text-grey);
+    margin-top: 4px;
+}
+
+.history-item-status {
+    text-align: right;
+}
+
+.history-item-status .item-price {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-white);
+}
+
+.history-item-status .item-status {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* Status Warna */
+.item-status.pending { color: #FF9800; }
+.item-status.success { color: #4CAF50; }
+.item-status.failed { color: #F44336; }
+
+/* ================================================== */
+/* MODAL DETAIL TRANSAKSI YANG LEBIH PROFESIONAL      */
+/* ================================================== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: var(--bg-light);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.show .modal-content {
+    transform: translateY(0);
+}
+
+.modal-title {
+    color: var(--primary-yellow);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.order-summary {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--bg-input);
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item span:first-child {
+    color: var(--text-grey);
+    font-weight: 500;
+}
+
+.summary-item.total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--bg-input);
+}
+
+.summary-item.total span:first-child {
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+.summary-item.total strong {
+    color: var(--primary-yellow);
+    font-size: 1.2rem;
+}
+
+/* Tombol Close */
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--text-grey);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.btn-text:hover {
+    color: var(--text-white);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tombol Customer Service yang Lebih Baik */
+.cs-buttons {
+    display: flex;
+    grid-template-columns: 100px;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    padding: 10px;
+    justify-content: center;
+}
+
+.btn-cs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-cs:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cs i {
+    font-size: 1.2rem;
+}
+
+.btn-cs.whatsapp {
+    background-color: #25D366;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.btn-cs.telegram {
+    background-color: #0088cc;
+    background: linear-gradient(135deg, #0088cc, #005f8c);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .summary-item {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+.btn-cs:hover { opacity: 0.9; }
+.btn-cs.whatsapp { background-color: #25D366; }
+.btn-cs.telegram { background-color: #0088cc; }
+

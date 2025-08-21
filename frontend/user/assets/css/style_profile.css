@@ -1,0 +1,304 @@
+    /* Import Font dari Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    /* Variabel Warna & Gaya Global */
+    :root {
+        --bg-dark: #121212;
+        --bg-light: #1A1A1A;
+        --bg-input: #2C2C2C;
+        --primary-red: #FBC02D;
+        --primary-yellow: #FBC02D;
+        --text-white: #FFFFFF;
+        --text-grey: #AAAAAA;
+    }
+
+    /* Reset dan Global Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--bg-dark);
+        color: var(--text-white);
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    a {
+        color: var(--text-white);
+        text-decoration: none;
+    }
+
+    /* Header & Navigasi */
+    .icon_logo {
+        width: 70px;
+        cursor: pointer;
+    }
+
+    .main-header {
+        padding: 20px 0;
+        border-bottom: 1px solid var(--bg-light);
+    }
+
+    .main-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--primary-red);
+    }
+
+    .main-nav a {
+        margin: 0 15px;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .main-nav a:hover {
+        color: var(--primary-yellow);
+    }
+    
+    /* Hamburger Menu */
+    .hamburger-menu {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Tombol (Button) */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-red);
+    color: var(--bg-dark);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+    
+    /* ==================================== */
+    /* STYLE UNTUK HALAMAN PROFIL      */
+    /* ==================================== */
+
+    .profile-page-container {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    .profile-header-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Kartu Profil Pengguna */
+    .profile-card {
+        background: var(--bg-light);
+        border-radius: 8px;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .profile-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #007BFF;
+        color: var(--text-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+
+    .profile-info {
+        flex-grow: 1;
+    }
+
+    .profile-info h2 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .profile-tag {
+        background-color: rgba(0, 123, 255, 0.2);
+        color: #007BFF;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 4px 8px;
+        border-radius: 20px;
+    }
+
+    .settings-btn {
+        background: none;
+        border: none;
+        color: var(--text-grey);
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: color 0.2s ease;
+    }
+
+    .settings-btn:hover {
+        color: var(--primary-yellow);
+    }
+
+    /* Kartu Gampang Coins */
+    .coins-card {
+        background: var(--bg-light);
+        border-radius: 8px;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .coins-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .coins-info h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: var(--text-grey);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .coins-icon {
+        width: 20px;
+        height: 20px;
+        filter: grayscale(100%) brightness(1.5);
+    }
+
+    .coins-info p {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-yellow);
+    }
+
+    .coins-actions .btn-sm {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .coins-actions .btn-secondary {
+        background-color: var(--bg-input);
+    }
+
+    /* Grid Statistik */
+    .profile-section-title {
+        margin-top: 0;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .stat-card {
+        background: var(--bg-light);
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        border-left: 5px solid var(--bg-input);
+    }
+
+    .stat-card h3 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .stat-card p {
+        margin: 0.5rem 0 0 0;
+        color: var(--text-grey);
+        font-weight: 600;
+    }
+
+    /* Warna-warni untuk kartu status */
+    .stat-card.yellow { border-color: #FFC107; }
+    .stat-card.yellow h3 { color: #FFC107; }
+
+    .stat-card.blue { border-color: #17A2B8; }
+    .stat-card.blue h3 { color: #17A2B8; }
+
+    .stat-card.green { border-color: #28A745; }
+    .stat-card.green h3 { color: #28A745; }
+
+    .stat-card.red { border-color: #DC3545; }
+    .stat-card.red h3 { color: #DC3545; }
+
+
+    /* Aturan Responsif */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-wrap: wrap;
+    }
+
+    .search-container {
+        order: 3;
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--bg-light);
+        padding: 1rem 0;
+        margin-top: 1rem;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav a {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--bg-input);
+    }
+
+    .main-nav a:last-child {
+        border-bottom: none;
+    }
+    }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk atau Daftar - GAMPANGTOPUP</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <a href="index.html" class="logo">GAMPANGTOPUP</a>
+            <div class="auth-tabs">
+                <h3 id="login-tab" class="active">Masuk</h3>
+                <h3 id="register-tab">Daftar</h3>
+            </div>
+
+            <form id="login-form">
+                <p class="form-intro">Masuk dengan akun yang telah Kamu daftarkan.</p>
+                <div class="form-group">
+                    <input type="email" id="login-email" class="form-control" placeholder="Email Anda" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="login-password" class="form-control" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">MASUK</button>
+            </form>
+
+            <form id="register-form">
+                <p class="form-intro">Buat akun baru untuk mulai top up.</p>
+                <div class="form-group">
+                    <input type="text" id="register-username" class="form-control" placeholder="Username" required>
+                </div>
+                 <div class="form-group">
+                    <input type="email" id="register-email" class="form-control" placeholder="Email Anda" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="register-password" class="form-control" placeholder="Buat Password" required>
+                </div>
+                <div class="form-group recaptcha-container">
+                    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                </div>
+                <div class="form-group terms-container">
+                    <input type="checkbox" id="terms-checkbox">
+                    <label for="terms-checkbox">
+                        Dengan mendaftar, kamu menyetujui <a href="syarat-ketentuan.html" target="_blank">Syarat dan Ketentuan</a> serta <a href="kebijakan-pribadi.html" target="_blank">Kebijakan Privasi</a> kami.
+                    </label>
+                </div>
+                <button type="submit" id="register-button" class="btn btn-primary" style="width: 100%;" disabled>DAFTAR</button>
+            </form>
+
+            <div class="divider">
+                <span>Atau lanjutkan dengan</span>
+            </div>
+            <div class="social-login">
+                <a href="http://localhost:5000/api/auth/google" class="btn btn-social btn-google">
+                    <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google"/> Masuk dengan Google
+                </a>
+                <a href="http://localhost:5000/api/auth/facebook" class="btn btn-social btn-facebook">
+                    <img src="https://img.icons8.com/ios-filled/16/ffffff/facebook-new.png" alt="Facebook"/> Masuk dengan Facebook
+                </a>
+            </div>
+
+            <div id="auth-message" class="auth-message"></div>
+
+        </div>
+    </div>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

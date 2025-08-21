@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - GAMPANGTOPUP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style_profile.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">GAMPANGTOPUP</a>
+            <nav class="main-nav">
+                <a href="index.html">Beranda</a>
+                <a href="riwayat.html">Riwayat</a>
+                <a href="profile.html" class="active">Profil</a> </nav>
+            <div id="user-auth-links">
+                </div>
+            <div class="hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="container profile-page-container">
+        <div class="profile-header-grid">
+            <div class="profile-card">
+                <div class="profile-avatar" id="user-avatar">P</div>
+                <div class="profile-info">
+                    <h2 id="user-name">Memuat nama...</h2>
+                    <span class="profile-tag">Member</span>
+                </div>
+                <button class="settings-btn"><i class="fas fa-cog"></i></button>
+            </div>
+
+            <div class="coins-card">
+                <div class="coins-info">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2168/2168346.png" alt="Coins Icon" class="coins-icon">
+                    <h3>GampangCoins</h3>
+                    <p id="user-coins">0</p>
+                </div>
+                <div class="coins-actions">
+                    <button class="btn btn-primary btn-sm">Top Up</button>
+                    <button class="btn btn-secondary btn-sm">Redeem</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title profile-section-title">Ringkasan Transaksi</h2>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3 id="stat-total-transactions">0</h3>
+                <p>Total Transaksi</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="stat-total-sales">Rp 0</h3>
+                <p>Total Pembelian</p>
+            </div>
+            <div class="stat-card yellow">
+                <h3 id="stat-menunggu">0</h3>
+                <p>Menunggu</p>
+            </div>
+            <div class="stat-card blue">
+                <h3 id="stat-dalam-proses">0</h3>
+                <p>Dalam Proses</p>
+            </div>
+            <div class="stat-card green">
+                <h3 id="stat-berhasil">0</h3>
+                <p>Berhasil</p>
+            </div>
+            <div class="stat-card red">
+                <h3 id="stat-gagal">0</h3>
+                <p>Gagal</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/profile.js"></script>
+    <script src="assets/js/auth-ui.js" defer></script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel - GAMPANGTOPUP</title> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <img src="http://localhost:5000/images/logo.png" class="icon_logo" alt="logo1">
+            <a href="index.html" class="logo">GAMPANGTOPUP</a>
+            <div class="search-container">
+                <input type="text" id="global-search" placeholder="Cari game...">
+                <button type="button" id="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Top Up</a>
+                <a href="#">Vouchers</a>
+                <a href="#">Support</a>
+            </nav>
+            <div id="user-auth-section" class="user-section"></div>
+            <div class="hamburger-menu"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="article-detail-layout">
+                <div class="article-content-main" id="article-detail-content">
+                    <p>Memuat artikel...</p>
+                </div>
+                <aside class="article-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Artikel Populer</h3>
+                        <ul id="popular-articles-list">
+                            </ul>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h3>Top Up Game</h3>
+                        <ul id="top-up-game-list">
+                            </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth-ui.js" defer></script>
+    <script src="assets/js/artikel-detail.js"></script>
+</body>
+</html>
