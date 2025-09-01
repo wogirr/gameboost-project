@@ -166,10 +166,53 @@ const getProductDetails = async (req, res) => {
   }
 };
 
+// ==================== FUNGSI SEARCH GAME ====================
+const searchProducts = async (req, res) => {
+  // 1. Ambil query pencarian dari URL (?query=...)
+  const { query } = req.query;
+
+  // 2. Validasi: jika tidak ada query, kirim error
+  if (!query) {
+    return res.status(400).json({ message: 'Search query is required' });
+  }
+
+  try {
+    // 3. Buat query SQL untuk mencari produk yang namanya mirip
+    // Tanda '%' adalah wildcard, artinya "cocok dengan karakter apa pun"
+    // Jadi, 'pubg' akan cocok dengan 'PUBG Mobile', 'Game PUBG', dll.
+    const searchQuery = `
+      SELECT 
+        p.id, 
+        p.name, 
+        p.logo_url,
+        c.name as category_name
+      FROM 
+        products p
+      LEFT JOIN 
+        categories c ON p.category_id = c.id
+      WHERE 
+        p.name LIKE ? 
+      LIMIT 15; -- Batasi hasil agar tidak terlalu banyak
+    `;
+
+    // 4. Eksekusi query ke database
+    const [results] = await db.query(searchQuery, [`%${query}%`]);
+
+    // 5. Kirim hasil dalam format JSON ke frontend
+    res.json(results);
+
+  } catch (error) {
+    // 6. Jika terjadi error di server atau database
+    console.error('Error searching products:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
 module.exports = {
   getCategories,
   getProducts,
   getFlashSaleItems,
   getPopularProducts,
-  getProductDetails
+  getProductDetails,
+  searchProducts
 };

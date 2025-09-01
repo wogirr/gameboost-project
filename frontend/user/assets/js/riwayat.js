@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         historyContainer.innerHTML = transactions.map(trx => createHistoryItemHTML(trx)).join('');
     };
+
     const createHistoryItemHTML = (trx) => {
         const statusClass = (trx.status || 'pending').toLowerCase();
         const statusText = trx.status.charAt(0).toUpperCase() + trx.status.slice(1).toLowerCase();
@@ -68,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
     };
+
     // Fungsi renderModalDetails yang diperbarui
     const renderModalDetails = (trx) => {
         const transactionDate = new Date(trx.transaction_date).toLocaleString('id-ID', {
@@ -149,6 +151,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 </a>
             </div>
         `;
+    };
+
+        // === FUNGSI Hamburger ===
+    const hamburger = document.querySelector('.hamburger-menu');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (hamburger && mainNav) {
+        hamburger.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        });
     };
 
     // Event listener untuk tombol close (tambahkan ini jika belum ada)

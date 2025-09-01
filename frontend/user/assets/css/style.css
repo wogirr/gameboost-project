@@ -268,8 +268,10 @@ h2.section-title {
 }
 
 .game-card {
-    background-color: var(--bg-light);
+    background: linear-gradient(60deg, #ff6b35, #ff9500);
+    /* background-color: var(--bg-light); */
     border-radius: 8px;
+    /* border: 1px solid #ff9500; */
     overflow: hidden;
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -555,8 +557,8 @@ h2.section-title {
 }
 
 .footer-column.social-media .social-icons-large a {
-    color: #9c27b0;
-    background-color: #f3e5f5;
+    color: var(--bg-dark);
+    background-color: var(--primary-red);
     width: 36px;
     height: 36px;
     display: flex;
@@ -959,6 +961,8 @@ h2.section-title {
     color: var(--text-white);
     padding: 5px 10px;
     outline: none;
+    width: 100%; 
+    flex-grow: 1;
 }
 
 .search-container button {
@@ -967,6 +971,7 @@ h2.section-title {
     color: var(--text-grey);
     cursor: pointer;
     padding: 5px;
+    flex-shrink: 0;
 }
 
 /* Hamburger Menu */

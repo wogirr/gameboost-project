@@ -10,6 +10,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadSidebarContent();
 });
 
+// === FUNGSI Hamburger ===
+const hamburger = document.querySelector('.hamburger-menu');
+const mainNav = document.querySelector('.main-nav');
+
+if (hamburger && mainNav) {
+    hamburger.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    });
+};
+
 async function loadSharedUI() {
   try {
     const response = await fetch('footer.html');
